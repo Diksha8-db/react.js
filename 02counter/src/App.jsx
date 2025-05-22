@@ -15,6 +15,9 @@ function App() {
     // counter++;
     if(counter > 0 && counter < 20){
       setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
     }
   }
 
