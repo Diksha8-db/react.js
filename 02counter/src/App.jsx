@@ -13,11 +13,13 @@ function App() {
   function addValue(){
     console.log(counter);
     // counter++;
+
+    // setCounter accepts a callback function
     if(counter > 0 && counter < 20){
-      setCounter(counter + 1);
-      setCounter(counter + 1);
-      setCounter(counter + 1);
-      setCounter(counter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
+      setCounter((prevCounter) => prevCounter + 1);
     }
   }
 
