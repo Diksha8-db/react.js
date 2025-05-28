@@ -1,0 +1,11 @@
+/* use should never modify your state
+Changes should be made using reducers or functions
+*/
+/* SOME IMPORTANT CONCEPT OF REDUX OR ITS OPINIONATED VERSION 
+REDUX TOOLKIT*/
+/*
+1. store
+2. reducers
+3. useSelector
+4. useDispatch
+*/

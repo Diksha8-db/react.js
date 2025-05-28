@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Todoprovider } from "./contexts";
 import { TodoForm } from "./components";
 import { TodoItem } from './components'
+
 function App() {
   const [todos, setTodos] = useState([])
 
@@ -56,7 +57,8 @@ function App() {
             Manage Your Todos
           </h1>
 
-          <div className="mb-4">{/* Todo form goes here */}
+          <div className="mb-4">
+            {/* Todo form goes here */}
             <TodoForm/>
           </div>
 
