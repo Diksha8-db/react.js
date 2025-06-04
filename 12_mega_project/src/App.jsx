@@ -6,6 +6,7 @@ import { Header, Footer } from './components';
 import authService from './appwrite/auth';
 import {login,logout} from './store/authSlice'
 import { Outlet } from 'react-router';
+import PingButton from './components/PingButton';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(()=>{
-    authService.getCurrentuser()
+    authService.getCurrentUser()
     .then((userData) => {
       if(userData){
         dispatch(login({userData}))
@@ -28,14 +29,18 @@ function App() {
   
   return !loading ? (
     <>
-    <div className="min-h-screen flex flex-wrap content-between bg-gray-400"> 
-      <div className="w-full block">
-         <Header/>
-         <main>
-        {/* <Outlet/> */}
-         </main>
-         <Footer/>
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header />
+        <main>
+        TODO:  <Outlet />
+        </main>
+        <Footer />
       </div>
+    </div>
+    <div className="p-8">
+      <h1 className="text-2xl font-bold mb-4">Appwrite Ping Test</h1>
+      <PingButton />
     </div>
     </>
   ) : null
